@@ -1,0 +1,807 @@
+
+.with_border {
+ 	border-style: solid;
+ 	border-width: 2px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+
+
+.loginButton {
+   border-top: 1px solid #cbe7bd;
+   background: #a1ce8b;
+   background: -webkit-gradient(linear, left top, left bottom, from(#4b862d), to(#a1ce8b));
+   background: -webkit-linear-gradient(top, #4b862d, #a1ce8b);
+   background: -moz-linear-gradient(top, #4b862d, #a1ce8b);
+   background: -ms-linear-gradient(top, #4b862d, #a1ce8b);
+   background: -o-linear-gradient(top, #4b862d, #a1ce8b);
+   padding: 8px 16px;
+   -webkit-border-radius: 6px;
+   -moz-border-radius: 6px;
+   border-radius: 6px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #000000;
+   font-size: 17px;
+   font-family: Georgia, Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.loginButton:hover {
+   border-top-color: #4b862d;
+   background: #4b862d;
+   color: #ccc;
+   }
+.loginButton:active {
+   border-top-color: #4b862d;
+   background: #4b862d;
+   }
+
+.loginButton img {
+	vertical-align: middle;
+}
+
+.demo {
+	color: #1F844E;
+}
+
+.highlight {
+	background-color: #AEDE78;
+}
+
+span.logo {
+	color: #96D550;
+}
+
+
+ol.purpose_list  {
+  font-size: 3em;
+  color: #96D550;
+}
+
+ol.purpose_list  p {
+  font-size: .5em;
+  font-family: arial;
+  font-weight: bolder;
+  color: #000000;
+}
+
+ol.purpose_list  li {
+  margin-bottom: .2em;  
+}
+
+#bottomcontainer { 
+text-align: center;
+}
+
+#bottomlist
+{
+text-align: center;
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+#bottomlist li
+{
+display: inline;
+font-size: 1.5em;
+padding: 0;
+margin: 0;
+}
+
+#bottomlist li:before { content: "| ";
+      padding: 10px;
+ }
+#bottomlist li:first-child:before { content: ""; }
+
+* html #bottomlist li
+{
+border-left: 1px solid black;
+padding: 0 0.4em 0 0.4em;
+margin: 0 0.4em 0 -0.4em;
+}
+
+* html #bottomlist { height: 1%; }
+
+* html #bottomlist li
+{
+display: block;
+float: left;
+}
+
+.topmenuleft {
+	position: absolute;
+	left: 170px;
+	top: 5px;
+	width: 80%;
+	font-size: 1.6em;
+}
+
+
+.topmenuright {
+	position: absolute;
+	right: 50px;
+	top: 50px;
+	width: 80%
+	font-size: .8em;
+}
+
+
+#topcontainer { 
+text-align: center;
+}
+
+#toplistright
+{
+text-align: right;
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+#toplistright li
+{
+display: inline;
+padding: 0;
+margin: 0;
+}
+
+#toplistright li:before { content: "| ";
+ padding: 8px;
+
+ }
+#toplistright li:first-child:before { content: ""; }
+
+* html #toplistright li
+{
+border-left: 1px solid black;
+padding: 0 0.4em 0 0.4em;
+margin: 0 0.4em 0 -0.4em;
+}
+
+* html #toplistright { height: 1%; }
+
+* html #toplistright li
+{
+display: block;
+float: left;
+}
+
+
+
+
+#toplistleft
+{
+text-align: left;
+list-style: none;
+padding: 0;
+margin: .5em;
+}
+
+#toplistleft li
+{
+display: inline;
+padding: 0;
+margin: 0;
+}
+
+#toplistleft li:before { 
+    content: "| "; 
+    padding: 10px;
+
+}
+#toplistleft li:first-child:before { content: ""; }
+
+* html #toplistleft li
+{
+border-left: 1px solid black;
+padding: 0 0.4em 0 0.4em;
+margin: 0 0.4em 0 -0.4em;
+}
+
+* html #toplistleft { height: 1%; }
+
+* html #toplistleft li
+{
+display: block;
+float: left;
+}
+
+
+.center {
+     	margin:0 auto;
+	width: 80%;
+}
+
+.green {
+	color: #66CD00;
+}
+
+.oomph {
+	font-size: 1.7em;
+	color: #66CD00;
+}
+
+.warning {
+	color: red;
+}
+
+.form_off {
+	color: #aeaca9;
+}
+
+
+.andor {
+	color: #96D550;
+	font-size: 6em;
+}
+
+.littleandor {
+	color: #96D550;
+	font-size: 3em;
+}
+
+.two_choice
+{
+	text-align: center;
+	border-width: thin thin thin thin;
+	padding: 5px 5px 5px 5px;
+	border-style: dotted dotted dotted dotted;
+	border-color: gray gray gray gray;
+}
+
+button.smaller {
+	font-size: 0.65em;
+}
+
+.buttons a.smaller{
+	font-size: 0.65em;
+}
+
+fieldset {
+	border: 3px solid #777788; padding: 5px;
+}
+
+legend {
+	color: #000;
+	background: #96D550;
+	font-size: 1.2em;
+	padding: 5px;
+}
+
+legend.form_off {
+	color: #AEACA9;
+	background: #b8d598;
+	font-size: 1.2em;
+	padding: 5px;
+}
+
+h1,h2,h3,h4,h5,h6{
+	margin-bottom: 1px;
+	padding-bottom: 1px;
+	margin-top: 1px;
+	padding-top: 1px;
+}
+
+
+p {
+	text-indent: 18px;
+	text-align: left;	
+	margin: 10px;
+}
+
+a:link { color: #448; }
+a:visited { color: #448; }
+
+
+
+table{
+  border-spacing: 0px;
+  text-align: left;
+
+
+}
+
+table.chart {
+  padding: 5px;
+  border: 0px solid black;
+  border-spacing: 0px;
+  text-align: left;
+  width: 100%;
+}
+
+table.chart thead tr{
+  font-family: Arial, monospace;
+  font-size: 14px;
+}
+
+table.chart thead tr th{
+  border-bottom: 2px solid black;
+  border-top: 1px solid black;
+  margin: 0px;
+  padding: 2px;
+  background-color: #96D550;
+}
+
+
+table.chart tr {
+  font-family: arial, monospace;
+  font-size:12px;
+  background-color: white;
+}
+
+table.chart tr.odd {
+  background-color: #AAAAAA;
+}
+
+table.chart tr td, th{
+  border-bottom: 1px solid black;
+  padding: 2px;
+}
+
+table.chart_form_off thead tr th{
+  border-bottom: 2px solid black;
+  border-top: 1px solid black;
+  margin: 0px;
+  padding: 2px;
+  background-color: #b8d598;
+}
+
+table.chart_form_off {
+  padding: 5px;
+  border: 0px solid black;
+  border-spacing: 0px;
+  text-align: left;
+  width: 100%;
+}
+
+table.chart_form_off thead tr{
+  font-family: Arial, monospace;
+  font-size: 14px;
+}
+
+
+table.chart_form_off tr {
+  font-family: arial, monospace;
+  font-size:12px;
+  background-color: white;
+}
+
+table.chart_form_off tr.odd {
+  background-color: #AAAAAA;
+}
+
+table.chart_form_off tr td, th{
+  border-bottom: 1px solid black;
+  padding: 2px;
+}
+
+
+
+.share_list
+{
+    text-align:left;
+    font-size:12px;
+}
+
+/* accessible styles for screen readers */
+/* should never show on a visual browser */
+.accessible
+	{
+	 position:absolute; 
+	 left:0; 
+	 top:-500px; 
+	 width:1px; 
+	 height:1px; 
+	 overflow:hidden;
+	}
+
+
+
+ /*================= STYLES FOR THE GRC MASTHEAD & CONTROLS ==================*/
+
+.menuminwidth0 {             /* for all browsers (non-IE) that obey min-width */
+	border:0;
+	margin:0;
+	padding:0;
+	height:55px;/* 36px masthead height + 18px button height + 1px lower border*/
+	min-width:560px;
+	position: absolute;
+	right: 1px;
+	top: 20px;
+	width: 60%
+}
+
+/* suppress our whole menu when not an interactive mode (when printing, etc.) */
+@media print, projection, aural { .menuminwidth0 { display:none; } }
+
+* html .menuminwidth1 { /* this allows IE5/6 to simulate min-width capability */
+	position:relative;  /* we can simulate a minimum width by creating a large */
+	float:left;          /* border in this first div, then placing our content */
+	height: 1px;          /* into a second nested div (see 2nd nested div next */
+	border-left:560px solid #fff;    /* CSS box-model borders are a fixed size */
+}
+
+* html .menuminwidth2 {    /* used to simulate min-width capability for IE5/6 */
+	position:relative;
+	margin-left:-560px;
+	height: 1px;
+}
+
+#masthead {
+	position:relative;      /* position our child objects relative to this div */
+	float:left;
+	vertical-align:top;	         /* protect from super-large user text sizing */
+	border:0;
+	margin:0;
+	padding:0;
+	width:100%;                                  /* grey-fill the entire width */
+	height:36px;                  /* set the overall height above the menu-bar */
+	background:#F3F3F3;                          /* a very light shade of grey */
+}
+
+#mastheadlogo {
+	float:left;
+	vertical-align:top;
+	border:0;
+	padding:0;
+	margin:6px 0 0 7px;
+}
+
+#focus {                                                 /* GRC's focus label */
+	position:absolute;
+	border:0;
+	margin:0;
+	padding:0;
+	top:15px;
+	left:301px;
+	width:121px;
+	height:13px;
+}
+
+#search {                                                    /* search button */
+	position:absolute;
+	border:0;
+	margin:0;
+	padding:0;
+	top:7px;
+	right:6px;
+	width:60px;
+	height:19px;
+}
+
+#text {                                                 /* search text field */
+	position:absolute;
+	border:1px solid #404040;
+	margin:0;
+	padding:0 0 0 2px;
+	top:7px;
+	right:65px;
+	width:12em;
+/*	height:1.215em;         we'll define this at the bottom of our style sheet */
+	font-size:14px !important;
+	background:#fefefe;
+}
+
+#yah {                                    /* the "You are here" label graphic */
+	position:absolute;
+	top:5px;
+	right:99px;
+	width:87px;
+	height:9px;
+}
+
+ /*========================= TOP OF THE MENU CASCADE =========================*/
+
+.menu {
+	position:relative;        /* establish a menu-relative positioning context */
+	float:left;                                     /* play nicely with others */
+	margin:0;
+	padding:0;
+	border:0;
+	height:18px;                                  /* the menu's overall height */
+	width:100%;         /* we always want our menu to fill the available space */
+	background:#D8D8D8;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;         /* this (and also below) sets the menu's font size */
+	border-bottom:1px solid black;        /* give us a black border underneath */
+}
+
+.menu img {
+	vertical-align: top;      /* prevent images from being pushed down by text */
+}
+
+.menu ul {
+	padding:0;
+	margin:0;
+	border:0;
+	list-style-type:none;          /* we don't want to view the list as a list */
+	line-height:1.5em;           /* globally set the menu's item spacing. note */
+}                               /* this must be 1.0 or 1.5 or 2.0 for Mozilla */
+
+.menu li {
+	float:left;    /* this creates the side-by-side array of top-level buttons */
+	position:relative;    /* create local positioning contexts for each button */
+}
+
+.menu ul li table {
+	margin:-1px 0;              /* IE5 needs -1px top and bottom table margins */
+	m\argin:0;               /* re-zero the table margins for everyone but IE5 */
+	border-collapse:collapse;      /* IE5 needs this for the sub-menus to work */
+	font-size:12px;        /* this sets the base font size for our entire menu */
+}
+
+.drop {
+	display:block;
+	padding:0px 0.33em;	       /* this sets the l/r margins for our menu item */
+	margin:0;
+	text-align:right;   /* this right alignment goes with the float:left below */
+	cursor:pointer;      /* IE tries to switch back to an I-beam, don't let it */
+	cursor:hand;           /* IE5 only knows about "hand", so set it both ways */
+}
+
+.drop span {        /* this simultaneously left and right aligns the text and */
+	float:left;       /* the >> in the drop-down menus which link to sub-menus */
+}
+
+.rightmenu {
+	position:relative;  /* establish a local positioning context for YAH label */
+	float:right;                  /* and right-align it at the top of our page */
+}
+
+#research {            /* this rightmost "Research" button must be positioned */
+	position:absolute;       /* absolutely so that the YAH (you are here) text */
+	top:0px;               /* label will slide underneath it under Opera v8.54 */
+	left:364px;    /* which has a z-order sequencing bug with abs-pos elements */
+}
+
+/*======================== TOP LEVEL MENU DEFINITIONS ========================*/
+
+.menu ul li ul {
+	display:none;                  /* initially hide the entire list hierarchy */
+	padding:1px;                               /* this is our box border width */
+}
+
+.menu ul li a,
+.menu ul li a:visited {                    /* unselected top-level menu items */
+	display:block;
+	float:left;
+	text-decoration:none;
+	height:18px;
+	color: black;
+
+}
+
+.menu ul li:hover a,
+.menu ul li a:hover {                        /* selected top-level menu items */
+	border-top:1px solid #000;    /* these 2 lines create the push-in illusion */
+	height:16px;
+	color: black;
+	
+}
+
+/*======================== 2ND LEVEL MENU DEFINITIONS ========================*/
+
+.menu ul li:hover ul,
+.menu ul li a:hover ul {                           /* 2nd level drop-down box */
+	display:block;
+	position:absolute;
+	margin:0;
+	top:18px;              /* place us just up underneath the top-level images */
+	left:-1px;       /* left-align our drop-down to the previous button border */
+	height:auto;      /* the drop-down height will be determiend by line count */
+	width:13.5em;
+	color:black;                        /* this sets the unselected-text color */
+	background:black;         /* this sets our menu's effective "border" color */
+}
+
+.menu ul li:hover ul.leftbutton,
+.menu ul li a:hover ul.leftbutton {/* our first dropdown should not be skewed */
+	left:0px;
+}
+
+.menu ul li:hover ul.skinny,
+.menu ul li a:hover ul.skinny {             /* 2nd level skinny drop-down box */
+	width:8.08333em;   /* with a 12px default font, this is 97px width (97/12) */
+}
+
+.menu ul.rightmenu li:hover ul,
+.menu ul.rightmenu li a:hover ul {    /* 2nd level neighborhood drop-down box */
+	left:auto;
+	right:0;         /* nudge the right menu right to line up under the border */
+}
+
+* html .menu ul.rightmenu li a:hover ul {         /* IE5/6 needs a tweak here */
+	right:-1px;
+}
+
+.menu ul li:hover ul li a,
+.menu ul li a:hover ul li a {                   /* 2nd level unselected items */
+	border:0;
+	margin:0;
+	padding:0;
+	height:auto;
+	color:#000;               /* this sets the unselected drop-down text color */
+	background:#d8d8d8;       /* this sets the drop-down menu background color */
+	width:13.5em;
+}
+
+.menu ul li:hover ul li:hover a,
+.menu ul li a:hover ul li a:hover {                /* 2nd level selected item */
+	color:black;
+	background:white;
+}
+
+.menu ul li:hover ul.skinny li a,
+.menu ul li a:hover ul.skinny li a,
+.menu ul li:hover ul.skinny li a:hover,
+.menu ul li a:hover ul.skinny li a:hover {     /* 2nd level un+selected items */
+	width:8.08333em;
+}
+
+/*======================== 3RD LEVEL MENU DEFINITIONS ========================*/
+
+.menu ul li:hover ul li ul,
+.menu ul li a:hover ul li a ul {             /* hide inactive 3rd-level menus */
+	visibility:hidden;
+}
+     
+.menu ul li:hover ul li:hover ul,
+.menu ul li a:hover ul li a:hover ul {             /* 3rd level drop-down box */
+	visibility:visible;
+	position:absolute;
+	margin-top:-1px;	      /* bring the top edge of the 3rd level menu up one */
+	top:0;
+	left:8.08333em;
+	width:14em;
+}
+
+.menu ul li:hover ul li:hover ul li a,
+.menu ul li a:hover ul li a:hover ul li a {     /* 3rd level unselected items */
+	width:14em;
+	background:#d8d8d8;
+}
+
+.menu ul li:hover ul li:hover ul li a:hover,
+.menu ul li a:hover ul li a:hover ul li a:hover {    /* level3 selected items */
+	width:14em;
+	background:white;
+}
+
+
+
+/* copied from http://particletree.com/features/rediscovering-the-button-element/ by Kevin Hale  */
+/* As per that page, licensed under CC http://creativecommons.org/licenses/by/2.5/ */
+/* The css is intended to mix with the great icon set Silk available here http://www.famfamfam.com/lab/icons/silk/ by Mark James */ 
+
+/* BUTTONS */
+
+.buttons a, .buttons button{
+    display:block;
+    float:left;
+    margin:0 7px 0 0;
+    background-color:#f5f5f5;
+    border:1px solid #dedede;
+    border-top:1px solid #eee;
+    border-left:1px solid #eee;
+
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+    font-size: .9em;
+    line-height:130%;
+    text-decoration:none;
+    font-weight:bold;
+    color:#565656;
+    cursor:pointer;
+    padding:5px 10px 6px 7px; /* Links */
+}
+.buttons button{
+    width:auto;
+    overflow:visible;
+    padding:4px 10px 3px 7px; /* IE6 */
+}
+.buttons button[type]{
+    padding:5px 10px 5px 7px; /* Firefox */
+    line-height:17px; /* Safari */
+}
+*:first-child+html button[type]{
+    padding:4px 10px 3px 7px; /* IE7 */
+}
+.buttons button img, .buttons a img{
+    margin:0 3px -3px 0 !important;
+    padding:0;
+    border:none;
+    width:16px;
+    height:16px;
+}
+
+/* STANDARD */
+
+button:hover, .buttons a:hover {
+    background-color: #dff4ff;
+    border:1px solid #c2e1ef;
+    color:#336699;
+}
+
+.buttons a:active {
+    background-color: #6299c5;
+    border:1px solid #6299c5;
+    color:#fff;
+}
+
+/* POSITIVE */
+
+button.positive, .buttons a.positive{
+    color:#529214;
+}
+.buttons a.positive:hover, button.positive:hover {
+    background-color:#E6EFC2;
+    border:1px solid #C6D880;
+    color:#529214;
+}
+.buttons a.positive:active {
+    background-color:#529214;
+    border:1px solid #529214;
+    color:#fff;
+}
+
+/* NEGATIVE */
+
+.buttons a.negative, button.negative{
+    color:#d12f19;
+}
+.buttons a.negative:hover, button.negative:hover {
+    background:#fbe3e4;
+    border:1px solid #fbc2c4;
+    color:#d12f19;
+}
+.buttons a.negative:active {
+    background-color:#d12f19;
+    border:1px solid #d12f19;
+    color:#fff;
+}
+
+.buttons_disabled a, .buttons_disabled button{
+    display:block;
+    float:left;
+    margin:0 7px 0 0;
+    background-color:#ffffff;
+    border:1px solid #dedede;
+    border-top:1px solid #eee;
+    border-left:1px solid #eee;
+
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+    font-size: .9em;
+    line-height:130%;
+    text-decoration:none;
+    font-weight:bold;
+    color:#aeaca9;
+    cursor:pointer;
+    padding:5px 10px 6px 7px; /* Links */
+}
+.buttons_disabled button{
+    width:auto;
+    overflow:visible;
+    padding:4px 10px 3px 7px; /* IE6 */
+}
+.buttons_disabled button[type]{
+    padding:5px 10px 5px 7px; /* Firefox */
+    line-height:17px; /* Safari */
+}
+*:first-child+html button[type]{
+    padding:4px 10px 3px 7px; /* IE7 */
+}
+.buttons_disabled button img, .buttons a img{
+    margin:0 3px -3px 0 !important;
+    padding:0;
+    border:none;
+    width:16px;
+    height:16px;
+}
+
+
+

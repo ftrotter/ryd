@@ -1,0 +1,202 @@
+Notes to self... 
+Release 1 required features
+
+	- Add pin code support to playing patient messages using the telephone
+	- Add "sharing warning" somewhere in the system
+	- Have recordings have static numbers, so that users can "remember" what recording they want to play on the phone interface. 
+        - Make the above work on numbers that count on a per-user basis
+     	- Control for abusing users. how do we stop people from stealing hosting.
+	- Figure out why the subcribe to error is happening on the manage sharing page.
+	- create a help links system that allow for video embedding on smart browsers,
+		and just displays a help page on ie6
+	- On the per recording menu, make a drop down called "advanced" and make it hide the functions as per pidoco
+      	- After there are 5 or 6 shared with on a given record, create a more button to hide the list of other people the record is shared with... reuse the menu css? not likely... how else to do this?
+		How to degrade this on IE6?
+
+
+
+
+For iphone/ipad
+	- Allow stop all sharing from the sharing menu
+	- Display who you are sharing with and allow stop sharing on a per user basis too.	
+
+
+
+
+Tidy up
+	- Fix snap to top on rename. 
+		perhaps by moving to fieldset on the display. mabye using
+		http://www.tyssendesign.com.au/examples/styling-legends-revised.html#ex-one
+
+	- figure out why the firewall is interfering with rackspace cloud applications and turn it back on!!.. 
+		it completely locked me out once too... what gives?
+	- How to handle invite vs deleted sharing.
+		if you delete sharing with someone that you invited then it detects that you invited them and allows you to add them back
+		which is great... if you want to
+		but if you did not invite someone to the service and you stop sharing, it is gone forever
+		one solution is to create a "invite" record when adding a current user
+		which would effectively give you a "history" if you stopped all sharing.. but is that dangerous?
+		
+	- Do I need to allow deleting of invitations? to get rid of history?
+	- what about an invitation to view just one record? right now if a person is not in the system
+		then when the inviation is accepted you are queried to add them to -all- of your recordings
+
+Sharing Redesign, 
+?	It is unclear when you have an invited accepted (and therefore a share with button) AND you can invite new people, it looks like
+		its all part of the same process. 
+?	Make the invited user has joined an annoucement at the end of the login process...
+		You should be able to stop and start future sharing, and start and stop current sharing all using checkboxes. 
+?        Also when you "stop sharing" with someone entirely you they need to move to a "trash" area, where they can be permenatly deleted.
+
+Multi-tab auto-logout.
+	Fatal error: Call to undefined method Controller_login::manage() in /var/www/html/record/public/index.php on line 108 	
+	this happens because you have more than one tab open and the timeout hits in another tab...
+Release 2 required features
+
+
+	- for ipad/iphone Determine how to play an audio file from a web_app (i.e. a bookmark clickable from the homepage) 
+
+	- for pages that have only have required form inputs, set the focus on the input using onload javascript
+		so that when a user starts typing it automatically goes into the right place.
+
+        - Ask your doctor reminders
+		have a printable list of things that you might want to ask your doctor about.
+		it would be nice if this was something that you could build while you played back your recordings.
+		how to make this responsive (ajax) but still accessible (not ajax) 
+
+	- Appointment reminders
+		Add a date to recieve a call so that the system can remind you to ask your doctor something, and to remind you to record
+		your doctor when you visit them...
+
+
+	?? Create a "share with your doctor" feature 
+		- doctors can sign up by verifying their npi (done through healers oath) 
+		- doctors still use gmail to login... but that is not how their users find them, they use a doctor search function instead.
+		- doctors can see all of "thier" patients... but do not have a capacity for their own recordings
+
+	- Prevent new recordings from the phone system after subscription expires
+		- play a warning message to users 2 months before subscription expires
+	- fully seperate controller and view (no html in controllers) so that you can:
+		- create an iphone interface
+		- support multiple languanges starting with spanish
+	- upload file progress bar
+	- mark shared accounts as spam.
+	- on the sharing page, distingish between "share all" and "share some"
+		The report should start with those users that you are sharing all with. Then it should show any user that you are just sharing a few files with
+		and detail what recordings exactly you are sharing. 
+	- comments
+		- New plan hire Josh (or someonelike), or do myself to do an open source mp3 player that supports the new Cue Point system in OSMF
+			http://blogs.adobe.com/osmf/2009/11/cue_point_support_in_osmf.html
+		The system should generously support "moment in time" commenting inside the mp3 file
+		so that you could make a comment about an mp3 file and include cue points inside the comments.
+		you would want to make all comments available for display, and clicking on the cue points would move the stream to the right place
+		you would want comments to "focus" when the player naturally crossed that part of the mp3 file.
+		the player should support javascript integration so that you could control using hyper links, just like niftyplayer...
+		this will make it accessible even if the flash is not accessible...
+		this should spawn a seperate open source mp3 player project. see if josh would run it...
+		this should wait for OSMF 1.0 
+	- tags
+	- full delete recordings - system should inlcude a basic "trash" feature by adding a "deleted" data point to recordings..
+		and a delete date. So that recordings will be really deleted after about a month or so. these files should listed in the 
+		new "trash" area. If users browse to the trash list, they can both restore and permenantly delete recordings
+	- API
+		new API plan: There does not need to be a new "layer" of sharing. Rather each user can share recordings with any other user...
+		The decryption keys for incoming recordings will be recorded by the -owner- public key AND any user with a user_user_access entry with a 
+		valid signature. So to share an indivdual record, you can share it by directly encoding it with the public key of that user.
+		or you can "share all" which will do an indivual share on all previous recordings, then create an entry in user_user_access and sign it
+		when new recordings come in, the encrypting process will search for valid signed user_user_access entries and encrypt with 
+		that users public key if it is valid
+		Any user can create a token that can be later used in the API as a proxy for their private key. So if a doctor wants to integrate his/her EHR
+		then he signs up with his practice email, and then encourages his patients to share records with him. 
+		His EHR software can accept tokens for his account, and then download shared recordings that his account has access to, via users email.
+		Or he can just login with the email and he will see his hundreds of records right there... So integration is really a user-centric issue.
+		each phone is essentially a secondary user_key for a given user. The phone numbers are no longer recorded directly into the database for this
+		reason and instead only a hash is stored. The plaintext phone number is in fact the key. Of course this is a highly crackable user_key.
+		As a result we need to allow the user the option to decide to disable the "key with the phone" for thier account. Although this will mean that 
+		the playback phone number will no longer work for them, since merely calling with thier phone will no longer grant them access to their private key,
+		which will not allow the mp3s to be decoded.
+		There can now be a "trust RYD admins with a backup of your recordings" setting which is essentially a default setting for a user...
+
+	- sound files are indivdually linkable
+	- openid proxy
+	- mp3 tagging to detect download/upload sharing transition
+	
+
+Release 3 required features
+	- Google Health
+	- Indivo X
+
+
+Unscheduled and undetermined features
+xdonex	- scholarship codes
+	- record incoming calls
+	- administrative or research access/and denying that access
+	- allow patients to "invite" thier doctors to view their recordings...
+	- allow patients to share with doctors using the NPI as an identifier.
+
+
+
+
+
+
+Implement:
+
+*on demand storage
+*	get rackspace storage working
+
+*phone calls
+*	get basic twilio integration working with test number
+*	rent 1800 number
+
+
+* Rename recording title:
+(stubbed) Delete Recordings: (depends on rackspace files) 
+Comment system:
+	tagging
+	different user commenting on recordings
+	recording owner or comment owner delete.
+
+* recording uploads
+(later)	get some kind of "working do not click anything... signal"
+
+
+(later) Launch OpenID Directed Identity provider
+
+meta-sharing
+	use second level to implement token/password/directed_id
+	create second level public key access system
+
+recording sharing
+*	for one recording
+	for all of your recordings (depends on meta sharing)
+	sharing with non-users (depends on meta sharing)
+		Must have some method for sending a "code" that gives access to a users normal email account
+		then linking that account to an OpenID of the right kind...
+		
+Account: manage other email addresses (pointless without the context of metasharing)
+
+Create an API (depends on meta-sharing)
+
+(maybe) use the PECL id3 php extension to fill in mp3 information, like source of the file, the recording date, etc etc
+	(maybe) PECL id3 is here: http://pecl.php.net/package/id3 and the tutorial is at http://devzone.zend.com/article/4025
+	
+
+(maybe) record incoming provide a phone forward service for medical purposes. This would allow the patient to give the doctor a special "record my doctor" phone number that they could use for all medical related calls. The number would automatically record all the information sent to through to the cell phone... 
+
+(maybe) implement a version of record incoming for general purpose call recording. So that you could give out a special phonenumber to people who were not your friends that would automatically record everything. Some states require that both parties now about the call as per: http://en.wikipedia.org/wiki/Telephone_recording_laws#Two_party_notification_states
+so for numbers in those states inbound and outbound calls would need to be done with a voice prefix that says, this call is being monitored...
+
+
+
+UX steps.
+
+Run in person silverback test with a good mac and a mouse at UTMB http://silverbackapp.com/
+Refine the frontpage design with fivesecond test... http://www.fivesecondtest.com/
+Should we invest in a eye scanner for the usability studies?
+
+
+
+
+
+
+

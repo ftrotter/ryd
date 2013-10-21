@@ -1,0 +1,43 @@
+{include file='big_menu.tpl'}
+
+ <div style='width: 560px; float: left;'>
+ <fieldset style='width: 98%; '>
+	<legend>Start here to sign up for <i>Your Doctors Advice</i>: </legend> 
+     <ul>
+         <li>You must have a Google account to 
+	log in (for security purposes).	
+	<a href='http://mail.google.com/mail/signup'>Click here</a>
+to sign up for a gmail account if you don't have one.  Then you'll come back to this screen to log in.
+<br>
+<br>
+If you already have a gmail account, proceed to the box below.
+</li>
+      </ul>
+</fieldset>
+<br>  
+ <fieldset style='width: 98%;'>
+	<legend>
+<a href="javascript: openid.signin('google');"><b>Log in</b></a> 
+ with your gmail account by clicking on this Google box: </legend> 
+<form action='{$form_action}' method='get' id='openid_form'>
+        <input type='hidden' name='action' value='verify' />
+                <div id='openid_choice'>
+                        <div style='float: right' id='openid_input_area'>
+		<input id='openid_identifier' name='openid_identifier' type='text' value='http://' /><input  id='openid_submit' type='submit' value='Sign-In'/>
+                        </div>
+                        <div style='float: left' id='openid_btns'></div>
+                        </div>
+                        
+                        <noscript>
+                        <p>OpenID is service that allows you to log-on to many different websites using a single indentity.
+                        Find out <a href='http://openid.net/what/'>more about OpenID</a> and <a href='http://openid.net/get/'>how to get an OpenID enabled account</a>.</p>
+                        </noscript>
+</form>
+        </fieldset>
+</div>
+   <div id='logo' style='float: left; width: 40%; padding: 40px 5px 5px 40px;'> 
+<img src='/images/logo.gif' alt='Logo' \> 
+</div> 
+
+{include file='home.tpl'}
+

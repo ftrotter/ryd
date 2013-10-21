@@ -1,0 +1,10 @@
+<br>
+<div class='#topcontainer'>
+<ul id='toplist'> 
+        <li id='active'> <a target='_blank' id='current' href='{$how_it_works_url}'> How it works</a> 
+</li>
+        <li> <a target='_blank' href='{$good_idea_url}'> Why it's a good idea </a></li>
+        <li> <a target='_blank' href='http://cautiouspatient.org'> About Us</a></li>
+</ul>
+</div>
+

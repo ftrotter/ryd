@@ -1,0 +1,33 @@
+
+http://next.yourdoctorsadvice.org/index.php/signup/subscribe/?code=trial
+	Sends the provider for phone based first time login in the GET
+	Checks to see that the code is a valid code.
+	sets some SESSION values for first_login etc etc...
+
+
+http://next.yourdoctorsadvice.org/index.php/hybridauth/index/?provider=YDANextOpenID
+	Will automatically bounce to
+http://next.yourdoctorsadvice.org/index.php/hybridauth/endpoint/?hauth.start=YDANextOpenID&hauth.time=1339719625
+	Will automatically bounce to 
+http://next.yourdoctorsadvice.org/index.php/openid/index/?openid.ns=http%3A%2F%2Fspecs.openid.........n
+	Which is the Open ID process
+	Which displays the phone login phone...
+	Which then displays the pin formi
+	Which then posts back to 
+http://next.yourdoctorsadvice.org/index.php/hybridauth/endpoint/?hauth.done=YDANextOpenI......
+	Which forwards to 
+http://next.yourdoctorsadvice.org/index.php/hybridauth/index/?provider=YDANextOpenID
+	Which forwards to
+http://next.yourdoctorsadvice.org/index.php/hybridauth/success?provider=YDANextOpenID
+	Which forwards to 
+http://next.yourdoctorsadvice.org/index.php/login/viewkeys
+	Which tests that the basic encryption functions are working.
+	Then forwards to
+http://next.yourdoctorsadvice.org/index.php/xhtmlsimple/login/eula
+	Which POSTS the EULA acceptance back to itself...
+	Then forwards to 
+http://next.yourdoctorsadvice.org/index.php/login/index/
+	Which forwards to
+http://next.yourdoctorsadvice.org/index.php/recordings/index/
+
+

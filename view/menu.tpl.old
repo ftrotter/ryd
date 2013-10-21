@@ -1,0 +1,66 @@
+
+<!-- ########################## Main Menu (from menu.tpl) and borrowed from GRC ########################## -->
+
+<div class="menuminwidth0"><div class="menuminwidth1"><div class="menuminwidth2">
+
+
+<div class="menu">
+
+<ul>
+	<li><a href="/index.php/recordings/index"> Recordings &nbsp; &nbsp;|<!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li><a href="/index.php/sharing/index/">&nbsp;Sharing &nbsp; &nbsp;|<!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+
+		<ul>
+			<li><a href="/index.php/sharing/index/">&nbsp;Share all Recordings</a></li>
+			<li><a href="/index.php/sharing/index/">&nbsp;Control Sharing</a></li>
+		</ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li><a href="/index.php/account/index/">&nbsp;Advanced &nbsp; &nbsp;|<!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul>
+			<li><a href="/index.php/recordings/upload/">&nbsp;Upload Recording</a></li>
+			<li><a href="/index.php/recordings/downzip/">&nbsp;Zip file of Recordings</a></li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+
+<ul>
+	<li><a href="/index.php/account/index/">&nbsp;Account &nbsp; &nbsp;|<!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul>
+			<li><a href="/index.php/account/manage_phones/">&nbsp;Manage Phones</a></li>
+			<li><a href="/index.php/account/subscribe/">&nbsp;Manage Subscriptions</a></li>
+			<li><a href="/index.php/account/index/">&nbsp;Manage Settings</a></li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+<ul>
+	<li>&nbsp;Logged in as {$user_name} <!--[if gt IE 6]><!--><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li><a href="/index.php/account/logout/">&nbsp;Logout <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+</div> <!-- close "menu" div -->
+<hr style="display:none" />
+</div></div></div> <!-- close the "minwidth" wrappers -->
+<!-- ###################### Main Menu (from menu.tpl) and borrowed from GRC  ###################### -->
+
+
+
+
